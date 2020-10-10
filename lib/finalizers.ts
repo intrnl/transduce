@@ -3,7 +3,7 @@
  * @param iterable Iterable to use
  */
 export function toArray<T> (iterable: Iterable<T>): T[] {
-  return [...iterable];
+	return [...iterable];
 }
 
 /**
@@ -11,7 +11,7 @@ export function toArray<T> (iterable: Iterable<T>): T[] {
  * @param iterable Iterable to use
  */
 export function toSet<T> (iterable: Iterable<T>): Set<T> {
-  return new Set(iterable);
+	return new Set(iterable);
 }
 
 /**

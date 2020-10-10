@@ -3,13 +3,13 @@
  * @param predicate Function that gets executed on every single item
  */
 export function filter<T> (predicate: ((item: T, index: number) => boolean)) {
-  return function* (iterable: Iterable<T>) {
-    let index = 0;
+	return function* (iterable: Iterable<T>) {
+		let index = 0;
 
-    for (let item of iterable) {
-      if (predicate(item, index++)) yield item;
-    }
-  }
+		for (let item of iterable) {
+			if (predicate(item, index++)) yield item;
+		}
+	}
 }
 
 /**
@@ -17,14 +17,14 @@ export function filter<T> (predicate: ((item: T, index: number) => boolean)) {
  * @param count How many items to take
  */
 export function first (count: number) {
-  return function* (iterable: Iterable<any>) {
-    let index = 0;
+	return function* (iterable: Iterable<any>) {
+		let index = 0;
 
-    for (let item of iterable) {
+		for (let item of iterable) {
 			if (++index > count) return;
 			yield item;
-    }
-  }
+		}
+	}
 }
 
 /**
@@ -32,15 +32,15 @@ export function first (count: number) {
  * @param count How many items to take
  */
 export function last (count: number) {
-  return function* (iterable: Iterable<any>) {
+	return function* (iterable: Iterable<any>) {
 		// There's no way to take the items from the end without dumping all of them
 		// to a placeholder array.
-    let holdover = [...iterable];
+		let holdover = [...iterable];
 
-    for (let i = holdover.length - count; i < holdover.length; i++) {
-      yield holdover[i];
-    }
-  }
+		for (let i = holdover.length - count; i < holdover.length; i++) {
+			yield holdover[i];
+		}
+	}
 }
 
 /**
@@ -48,13 +48,13 @@ export function last (count: number) {
  * @param count How many items to skip
  */
 export function skip (count: number) {
-  return function* (iterable: Iterable<any>) {
-    let index = 0;
+	return function* (iterable: Iterable<any>) {
+		let index = 0;
 
  		for (let item of iterable) {
-      if (++index > count) yield item;
-    }
-  }
+			if (++index > count) yield item;
+		}
+	}
 }
 
 /**
@@ -62,18 +62,18 @@ export function skip (count: number) {
  * @param selector Value to select for uniqueness checking
  */
 export function unique<T, V> (selector?: ((value: T) => V)) {
-  return function* (iterable: Iterable<T>) {
-    let set = new Set;
+	return function* (iterable: Iterable<T>) {
+		let set = new Set;
 
-    for (let item of iterable) {
-      let id = selector ? selector(item) : item;
+		for (let item of iterable) {
+			let id = selector ? selector(item) : item;
 
-      if (!set.has(id)) {
-        set.add(id);
-        yield item;
-      }
-    }
-  }
+			if (!set.has(id)) {
+				set.add(id);
+				yield item;
+			}
+		}
+	}
 }
 
 /**
