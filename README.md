@@ -1,6 +1,6 @@
 # `transduce`
 
-Efficient data processing
+Assortment of utility functins for efficient data processing
 
 ## Installation
 
