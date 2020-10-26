@@ -24,7 +24,7 @@
 		"prepublishOnly": "pnpm run build"
 	},
 	"devDependencies": {
-		"@intrnl/bundl": "^0.1.3",
+		"@intrnl/bundl": "^0.1.8",
 		"typescript": "^4.0.3"
 	}
 }

@@ -1,11 +1,11 @@
 devDependencies:
-  '@intrnl/bundl': 0.1.3
+  '@intrnl/bundl': 0.1.8
   typescript: 4.0.3
 lockfileVersion: 5.2
 packages:
-  /@intrnl/bundl/0.1.3:
+  /@intrnl/bundl/0.1.8:
     dependencies:
-      '@intrnl/rollup-plugin-esbuild': 0.2.2_esbuild@0.7.21+rollup@2.32.1
+      '@intrnl/rollup-plugin-esbuild': 0.3.1_esbuild@0.7.21+rollup@2.32.1
       esbuild: 0.7.21
       escalade: 3.1.1
       kleur: 4.1.3
@@ -13,8 +13,8 @@ packages:
     dev: true
     hasBin: true
     resolution:
-      integrity: sha512-UmW5Fvm+lRjiRGOfSoHx1i+seZH9xtyCqGqSRNu9ZKUM61aWcIACxmBo9iVGGoaCyi6TeXD3geEyg0dRUqmKGg==
-  /@intrnl/rollup-plugin-esbuild/0.2.2_esbuild@0.7.21+rollup@2.32.1:
+      integrity: sha512-zdBbYRcKNqRB3+d/pSgFTgL2U6kD2AkN1hnEvQyWaYhULD+7Fc5TyTtRwm+EWkRkoMpxbqAgULoy6JAA7npxjQ==
+  /@intrnl/rollup-plugin-esbuild/0.3.1_esbuild@0.7.21+rollup@2.32.1:
     dependencies:
       '@rollup/pluginutils': 4.0.0_rollup@2.32.1
       esbuild: 0.7.21
@@ -24,7 +24,7 @@ packages:
       esbuild: ^0.6.28 || ^0.7.0
       rollup: ^2.26.8
     resolution:
-      integrity: sha512-ZtXxnAaP6utg4X09ZC6jM9isxkROsvrXdOELODdNFPzE+rLvIUFaKvFPbKY/qKevn65P+WuNaM8GqVr7SugN6Q==
+      integrity: sha512-P75BKe5txaTcUfmRUzvEyHft7BUwIa1+0HCxxu0uyqgyTwY58GtLn6ewNHNoV9f2+SZr+sN8n96j14pbcxNs6g==
   /@rollup/pluginutils/4.0.0_rollup@2.32.1:
     dependencies:
       '@types/estree': 0.0.45
@@ -96,5 +96,5 @@ packages:
     resolution:
       integrity: sha512-tEu6DGxGgRJPb/mVPIZ48e69xCn2yRmCgYmDugAVwmJ6o+0u1RI18eO7E7WBTLYLaEVVOhwQmcdhQHweux/WPg==
 specifiers:
-  '@intrnl/bundl': ^0.1.3
+  '@intrnl/bundl': ^0.1.8
   typescript: ^4.0.3
